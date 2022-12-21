@@ -14,9 +14,8 @@ import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
 import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 // Recent Card Imports
-import img1 from "../imgs/img1.png";
-import img2 from "../imgs/img2.png";
-import img3 from "../imgs/img3.png";
+
+import profile from "../imgs/profile.png";
 
 // Sidebar Data
 export const SidebarData = [
@@ -109,19 +108,19 @@ export const cardsData = [
 // Recent Update Card Data
 export const UpdatesData = [
   {
-    img: img1,
+    img: profile,
     name: "Andrew Thomas",
     noti: "Successifully recieved my package.Thank you @easymove",
     time: "25 seconds ago",
   },
   {
-    img: img2,
+    img: profile,
     name: "James Bond",
     noti: "Had fun with car i hired. very fast efficient and comfortable@easymove",
     time: "30 minutes ago",
   },
   {
-    img: img3,
+    img: profile,
     name: "Iron Man",
     noti: "Top notch customer service",
     time: "2 hours ago",
