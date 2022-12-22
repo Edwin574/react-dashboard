@@ -8,15 +8,15 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "./Table.css";
 
-function createData(name, trackingId, date, status) {
-  return { name, trackingId, date, status };
+function createData(name, trackingId,customer,phone, date, status) {
+  return { name, trackingId,customer,phone, date, status };
 }
 
 const rows = [
-  createData("Transport service ", 18908424, "2 March 2022", "Approved"),
-  createData("Transport Service ", 18908424, "2 March 2022", "Pending"),
-  createData("Car Leasing Service", 18908424, "2 March 2022", "Approved"),
-  createData("Transport Service", 18908421, "2 March 2022", "Delivered"),
+  createData("Transport service ", 18908424,"John","0712345678", "2 March 2022", "Approved"),
+  createData("Transport Service ", 18908424,"John","0712345678","2 March 2022", "Pending"),
+  createData("Car Leasing Service", 18908424,"John","0712345678","2 March 2022", "Approved"),
+  createData("Transport Service", 18908421, "John","0712345678","2 March 2022", "Delivered"),
 ];
 
 
@@ -56,6 +56,8 @@ export default function BasicTable() {
               <TableRow>
                 <TableCell>Product</TableCell>
                 <TableCell align="left">Tracking ID</TableCell>
+                <TableCell align="left">Customer</TableCell>
+                <TableCell align="left">Phone</TableCell>
                 <TableCell align="left">Date</TableCell>
                 <TableCell align="left">Status</TableCell>
                 <TableCell align="left"></TableCell>
@@ -71,6 +73,8 @@ export default function BasicTable() {
                     {row.name}
                   </TableCell>
                   <TableCell align="left">{row.trackingId}</TableCell>
+                  <TableCell align="left">{row.customer}</TableCell>
+                  <TableCell align="left">{row.phone}</TableCell>
                   <TableCell align="left">{row.date}</TableCell>
                   <TableCell align="left">
                     <span className="status" style={makeStyle(row.status)}>{row.status}</span>
