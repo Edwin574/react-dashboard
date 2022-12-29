@@ -45,14 +45,14 @@ const Sidebar = () => {
         <div className="menu">
           {SidebarData.map((item, index) => {
             return (
-              <div
+              <button
                 className={selected === index ? "menuItem active" : "menuItem"}
                 key={index}
                 onClick={() => setSelected(index)}
               >
                 <item.icon />
                 <span>{item.heading}</span>
-              </div>
+              </button>
             );
           })}
           {/* signoutIcon */}
