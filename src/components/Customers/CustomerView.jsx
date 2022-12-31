@@ -23,74 +23,53 @@ function Customers() {
           setLoadingData(!loadData)
         })
       }
-      if (loadingData) {
+      if (loadData) {
         // if the result is not ready so you make the axios call
         getData();
-      } if (loadingData) {
-      // if the result is not ready so you make the axios call
-      getData();
-    } if (loadingData) {
-      // if the result is not ready so you make the axios call
-      getData();
-    } if (loadingData) {
-      // if the result is not ready so you make the axios call
-      getData();
-    } if (loadingData) {
-      // if the result is not ready so you make the axios call
-      getData();
-    } if (loadingData) {
-      // if the result is not ready so you make the axios call
-      getData();
-    } if (loadingData) {
-      // if the result is not ready so you make the axios call
-      getData();
-    } if (loadingData) {
-      // if the result is not ready so you make the axios call
-      getData();
-    }
+      } 
     }, []
   );
 
-  return (
-    <>
-      {loadData ? (
-        <p>Loading Please wait...</p>
-      ) : (
-        <React.Fragment>
-          {/* <Title>List of Users</Title> */}
-          <Table size="small">
-            <TableHead>
-              <TableRow>
-                <TableCell>id</TableCell>
-                <TableCell>First Name</TableCell>
-                <TableCell>Last Name</TableCell>
-                <TableCell>username</TableCell>
-                <TableCell>Email Address </TableCell>
-                <TableCell>Country </TableCell>
-                <TableCell>Phone Number</TableCell>
+  // return (
+  //   <>
+  //     {loadData ? (
+  //       <p>Loading Please wait...</p>
+  //     ) : (
+  //       <React.Fragment>
+  //         {/* <Title>List of Users</Title> */}
+  //         <Table size="small">
+  //           <TableHead>
+  //             <TableRow>
+  //               <TableCell>id</TableCell>
+  //               <TableCell>First Name</TableCell>
+  //               <TableCell>Last Name</TableCell>
+  //               <TableCell>username</TableCell>
+  //               <TableCell>Email Address </TableCell>
+  //               <TableCell>Country </TableCell>
+  //               <TableCell>Phone Number</TableCell>
                   
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {data.map((row) => (
-                <TableRow key={row.id}>
-                  <TableCell>{row.id}</TableCell>
-                  {/* <TableCell>{row.complainant[0].toString()}</TableCell> */}
-                  <TableCell>{row.statement}</TableCell>
-                  <TableCell>{row.location}</TableCell>
-                  <TableCell>{row.status}</TableCell>
-                  <TableCell>{row.complainants}</TableCell>
-                  {/* <TableCell>{row.suspects.toString()}</TableCell>   */}
-                  <TableCell>{row.occurrence_book_number}</TableCell>
-                  {/* <TableCell>{row.recording_officer.toString()}</TableCell>       */}
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </React.Fragment>
-      )}
-    </>
-  );
+  //             </TableRow>
+  //           </TableHead>
+  //           <TableBody>
+  //             {data.map((row) => (
+  //               <TableRow key={row.id}>
+  //                 <TableCell>{row.id}</TableCell>
+  //                 {/* <TableCell>{row.complainant[0].toString()}</TableCell> */}
+  //                 <TableCell>{row.statement}</TableCell>
+  //                 <TableCell>{row.location}</TableCell>
+  //                 <TableCell>{row.status}</TableCell>
+  //                 <TableCell>{row.complainants}</TableCell>
+  //                 {/* <TableCell>{row.suspects.toString()}</TableCell>   */}
+  //                 <TableCell>{row.occurrence_book_number}</TableCell>
+  //                 {/* <TableCell>{row.recording_officer.toString()}</TableCell>       */}
+  //               </TableRow>
+  //             ))}
+  //           </TableBody>
+  //         </Table>
+  //       </React.Fragment>
+  //     )}
+  //   </>
+  // );
 }
 
 export default Customers;
