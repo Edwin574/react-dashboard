@@ -9,19 +9,10 @@ function App() {
   return (
     <div className="App">
       <div className="AppGlass">
-<<<<<<< HEAD
         <Sidebar/>
         <MainDash/>
         <RightSide/>
-=======
-        <Sidebar />
-        
-        <Customers></Customers>
-
-        {/* <MainDash/> */}
-        <RightSide />
-        
->>>>>>> 2f2a71439cb6ddba14d13448ebf125281b48b1d0
+        {/* <Customers></Customers> */}
       </div>
     </div>
   );
