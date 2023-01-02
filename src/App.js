@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <div className="AppGlass">
         <Sidebar />
+        
         <Customers></Customers>
 
         {/* <MainDash/> */}
