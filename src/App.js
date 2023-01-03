@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <div className="AppGlass">
         <Sidebar />
-        {/* <Customers></Customers> */}
+        <Customers></Customers>
         <MainDash/>
         <RightSide />
       </div>

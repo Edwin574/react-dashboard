@@ -15,7 +15,7 @@ function Customers() {
         .then((response) => {
           // check if the data is populated
           console.log(response.data.results);
-          setData(response.data);
+          setData(response.data.results);
           // you tell it that you had the result
           setLoadingData(false);
         });
@@ -26,81 +26,50 @@ function Customers() {
     }
   }, []);
 
-  // const myData = async () => {
-  //   await axios
-  //     .get("http://127.0.0.1:8000/easymove/customers/")
-  //     .then((responce) => {
-  //       console.log(responce);
-  //     });
-  // };
-  // useEffect(() => {
-  //   myData();
-  // }, []);
-  // console.log(data);
+  const columns = [
+    {
+      field: "id",
+      headerName: "ID",
+      width: 50,
+    },
+    {
+      field: "address",
+      headerName: "Address",
+      width: 150,
+    },
+    {
+      field: "birth_date",
+      headerName: "DOB",
+      width: 150,
+    },
+    {
+      field: "sex",
+      headerName: "Gender",
+      width: 100,
+    }]
+  
 
-  // const columns = [
-  //   {
-  //     field: "id",
-  //     headerName: "ID",
-  //     width: 50,
-  //   },
-  //   {
-  //     field: "city",
-  //     headerName: "City",
-  //     width: 100,
-  //   },
-  //   {
-  //     field: "abbreviation",
-  //     headerName: "Abbreviation",
-  //     width: 150,
-  //   },
-  //   {
-  //     field: "conference",
-  //     headerName: "Conference",
-  //     width: 150,
-  //   },
-  //   {
-  //     field: "division",
-  //     headerName: "Division",
-  //     width: 150,
-  //   },
-  //   {
-  //     field: "full_name",
-  //     headerName: "Full Name",
-  //     width: 150,
-  //   },
-  //   {
-  //     field: "name",
-  //     headerName: "Short Name",
-  //     width: 150,
-  //   },
-  // ];
-
-  // const rows = data.map((row) => ({
-  //   id: row.id,
-  //   full_name: row.full_name,
-  //   name: row.name,
-  //   abbreviation: row.abbreviation,
-  //   city: row.city,
-  //   conference: row.conference,
-  //   division: row.division,
-  // }));
+  const rows = data.map((row) => ({
+    id: row.id,
+    address: row.address,
+    birth_date: row.birth_date,
+    sex: row.sex,
+  }));
 
   return (
-    // <div style={{ height: "100%", width: "100%",display:'flex'}} className='flex-column'>
-    //   <div className="d-flex">
-    //     <div>1</div>
-    //     <div>2</div>
-    //     <div>3</div>
-    //   </div>
-    //   <DataGrid
-    //     rows={rows}
-    //     columns={columns}
-    //     pageSize={10}
-    //     rowsPerPageOptions={[10]}
-    //   />
-    // </div>
-    <div></div>
+    <div style={{ height: "100%", width: "100%",display:'flex'}} className='flex-column'>
+      <div className="d-flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        pageSize={10}
+        rowsPerPageOptions={[10]}
+      />
+    </div>
   );
 }
 
