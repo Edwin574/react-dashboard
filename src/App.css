@@ -31,13 +31,13 @@
   gap: 16px;
   grid-template-columns: 11rem auto 20rem;
   overflow: hidden;
-  margin: 0 !important;
+  /* margin: 0 !important; */
 }
 
 @media screen and (max-width: 1200px) {
   .AppGlass{
     grid-template-columns: 10% 50% auto;
-    overflow-y: scroll;
+    overflow-y:auto;
   } 
 }
 
