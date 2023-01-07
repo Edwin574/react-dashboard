@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import "./customerView.css";
 import { DataGrid } from "@mui/x-data-grid";
 import axios from "axios";
 
 function Customers() {
   // const [data, setData] = useState([]);
-  const [loadingData, setLoadingData] = useState(true);  
+  const [loadingData, setLoadingData] = useState(true);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -66,9 +67,8 @@ function Customers() {
       field: "division",
       headerName: "Division",
       width: 100,
-    }
-  ]
-  
+    },
+  ];
 
   const rows = data.map((row) => ({
     id: row.id,
@@ -82,21 +82,33 @@ function Customers() {
   }));
 
   return (
-    <div style={{ height: "100%", width: "100%",display:'flex'}} className='flex-column'>
-      <div className="d-flex">
-        <div><h1>CUSTOMER DATA</h1></div>
-        <div>2</div>
-        <div>3</div>
+    <div
+      style={{ height: "60%" }}
+      className="d-flex flex-column justify-content-around customers"
+    >
+      <div className="d-flex justify-content-between align-items-center customer-header">
+        <div>
+          <h2>CUSTOMER DATA</h2>
+        </div>
+        <div className="d-flex align-items">
+          <form action="" method="get">
+            <input type="text" placeholder="Search here" />
+          </form>
+
+          <button className="btn btn-primary">
+            <span>+</span> Add User
+          </button>
+        </div>
       </div>
       <DataGrid
         rows={rows}
-        rowHeight={25}
+        rowHeight={30}
         columns={columns}
         pageSize={10}
         rowsPerPageOptions={[10]}
       />
+      <div>Hello</div>
     </div>
-   
   );
 }
 

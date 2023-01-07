@@ -1,10 +1,8 @@
-.customertable{
-    display: flex;
-    flex-direction: column;
+.customers {
+  display: flex;
+
+  margin-top: 4%;
 }
-.dummydiv{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    flex: 1;
+.customer-header{
+    padding: 3em 0;
 }
