@@ -42,7 +42,7 @@ function Customers() {
     {
       field: "last_name",
       headerName: "Last Name",
-      width: 150,
+      width: 130,
     },
     {
       field: "position",
@@ -120,7 +120,7 @@ function Customers() {
           Toolbar: GridToolbar,
         }}
       />
-      <div>Hello</div>
+      <div style={{}}>Hello</div>
     </div>
   );
 }
