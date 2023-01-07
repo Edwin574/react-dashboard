@@ -9,3 +9,5 @@ function ViewTrucks() {
         </div>
     )
 }
+
+export default ViewTrucks
