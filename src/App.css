@@ -29,7 +29,7 @@
   background: var(--glass);
   border-radius: 2rem;
   gap: 16px;
-  grid-template-columns: 11rem auto 20rem;
+  grid-template-columns: 11rem auto;
   overflow: hidden;
   /* margin: 0 !important; */
 }

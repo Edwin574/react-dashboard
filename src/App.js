@@ -13,7 +13,7 @@ function App() {
         <Sidebar />
         <Customers></Customers>
         {/* <MainDash/> */}
-        <RightSide />
+        {/* <RightSide /> */}
       </div>
     </div>
   );

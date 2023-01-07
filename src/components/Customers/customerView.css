@@ -6,3 +6,7 @@
 .customer-header{
     padding: 3em 0;
 }
+.search-area{
+  gap: 1rem;
+  padding: 0 .5rem;
+}

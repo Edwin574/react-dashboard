@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./customerView.css";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid,GridToolbar } from "@mui/x-data-grid";
 import axios from "axios";
+import CustomerActions from "./customerActions"
 
 function Customers() {
   // const [data, setData] = useState([]);
@@ -56,7 +57,7 @@ function Customers() {
     {
       field: "city",
       headerName: "City",
-      width: 150,
+      width: 120,
     },
     {
       field: "conference",
@@ -67,6 +68,14 @@ function Customers() {
       field: "division",
       headerName: "Division",
       width: 100,
+    },
+    {
+      field: "action",
+      headerName: "Action",
+      width: 150,
+      renderCell: (params) => (
+        <CustomerActions {...{params}} />
+      )
     },
   ];
 
@@ -79,18 +88,19 @@ function Customers() {
     city: row.team.city,
     conference: row.team.conference,
     division: row.team.division,
+
   }));
 
   return (
     <div
-      style={{ height: "60%" }}
+      // style={{ height: "auto" }}
       className="d-flex flex-column justify-content-around customers"
     >
       <div className="d-flex justify-content-between align-items-center customer-header">
         <div>
           <h2>CUSTOMER DATA</h2>
         </div>
-        <div className="d-flex align-items">
+        <div className="d-flex align-items-center search-area">
           <form action="" method="get">
             <input type="text" placeholder="Search here" />
           </form>
@@ -102,10 +112,13 @@ function Customers() {
       </div>
       <DataGrid
         rows={rows}
-        rowHeight={30}
+        rowHeight={40}
         columns={columns}
         pageSize={10}
         rowsPerPageOptions={[10]}
+        components={{
+          Toolbar: GridToolbar,
+        }}
       />
       <div>Hello</div>
     </div>
