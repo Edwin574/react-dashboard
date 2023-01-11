@@ -7,10 +7,12 @@ import { UilBars } from "@iconscout/react-unicons";
 import { motion } from "framer-motion";
 
 
-const Sidebar = () => {
+const Sidebar = ({tab,setTab}) => {
   const [selected, setSelected] = useState(0);
 
   const [expanded, setExpaned] = useState(true);
+
+  
 
   const sidebarVariants = {
     true: {
@@ -49,10 +51,17 @@ const Sidebar = () => {
               <div
                 className={selected === index ? "menuItem active" : "menuItem"}
                 key={index}
-                onClick={() => setSelected(index)}
+                onClick={() => {
+                  setSelected(index);
+                  setTab(item.heading);
+                  // console.log(item.heading)
+                }
+                  
+                }
               >
                 <item.icon />
                 <span>{item.heading}</span>
+
               </div>
             );
           })}
@@ -61,6 +70,7 @@ const Sidebar = () => {
             <UilSignOutAlt />
           </div>
         </div>
+        {console.log(tab)}
       </motion.div>
     </>
   );

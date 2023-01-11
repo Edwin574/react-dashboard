@@ -4,7 +4,7 @@ function CarView() {
     
     return (
         <div>
-            <h1>WElcome to cars page</h1>
+            <h1>Welcome to cars page</h1>
         </div>
     )
 }
