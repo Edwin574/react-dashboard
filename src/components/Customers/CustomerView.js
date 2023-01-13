@@ -93,7 +93,7 @@ function Customers() {
 
   return (
     <div
-      style={{ height: "200px" }}
+      // style={{ height: "60%" }}
       className="d-flex flex-column justify-content-around customers"
     >
       <div className="d-flex justify-content-between align-items-center customer-header">

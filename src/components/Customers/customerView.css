@@ -1,5 +1,6 @@
 .customers {
   display: flex;
+  height: 80% !important;
 
   margin-top: 4%;
 }
