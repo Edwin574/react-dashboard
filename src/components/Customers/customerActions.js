@@ -11,19 +11,19 @@ function CustomerActions() {
         <Box>
       <Tooltip title="View customer details">
         <IconButton
-          onClick={() =>({})}
+          
         >
           <Preview />
         </IconButton>
       </Tooltip>
       <Tooltip title="Edit this Customer">
-        <IconButton onClick={{}}>
+        <IconButton >
           <Edit />
         </IconButton>
       </Tooltip>
       <Tooltip title="Delete this customer">
         <IconButton
-          onClick={() =>{}}
+          
         >
           <Delete />
         </IconButton>

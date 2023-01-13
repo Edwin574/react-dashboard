@@ -20,7 +20,7 @@ function App() {
       return<MainDash/>
     }
     else if (tab === "Customers") {
-      console.log("hello")
+
       return<Customers/>
     }
     else if (tab === "Drivers") {
