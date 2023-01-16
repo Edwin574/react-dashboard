@@ -28,7 +28,7 @@
   width: 100%;
   background: var(--glass);
   border-radius: 2rem;
-  gap: 16px;
+  gap: 15px;
   grid-template-columns: 11rem auto;
   overflow: hidden;
   /* margin: 0 !important; */
